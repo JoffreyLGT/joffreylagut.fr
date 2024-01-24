@@ -1,6 +1,7 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
+import { LINKEDIN_PROFILE } from "src/config";
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
@@ -15,7 +16,7 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     <li>
         <a
             class="py-3 text-base"
-            href="https://linkedin.com/in/joffrey-lagut-9b3b1076"
+            href={LINKEDIN_PROFILE}
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade">Contact</a
         >
