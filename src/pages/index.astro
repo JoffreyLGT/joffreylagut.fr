@@ -1,0 +1,112 @@
+---
+import { LINKEDIN_PROFILE } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+
+const posts =
+  (await getCollection("blog"))?.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  ) ?? [];
+
+const last_posts = posts.slice(0, 3);
+
+const projects =
+  (await getCollection("projects"))?.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  ) ?? [];
+
+const last_projects = projects.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Joffrey Lagut</div>
+    <div class="text-3xl py-3 font-bold">
+      Software Engineer, book lover and cinephile
+    </div>
+    <div class="py-2">
+      <text class="text-lg">
+        With 8 years of experience in fast paced environments, my strong skills
+        in <b>project management</b> and <b>software engineering</b> allowed me to
+        thrive in the financial sector where I developed a wide range of skills and
+        abilities in IT. <br />
+        My broad knowledge allows me to have a higher vision of the issues at hand
+        to understand them and provide the best solution to solve them.
+        <br /><br />
+        I studied <b>artificial inteligence</b> in 2023 and obtained a <a
+          class="link-secondary"
+          target="_blank"
+          href="https://files.datascientest.com/diploma/1558b841-8b6b-47ca-9e07-317f369917e3.pdf"
+          >Machine learning engineer</a
+        >'s degree during which I developed a product classification platform
+        that can be deployed to serve any ecommerce website. Checkout my latst
+        projects to learn more about it.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn btn-secondary" href={LINKEDIN_PROFILE} target="_blank"
+        >Let's connect!</a
+      >
+      <a href="/cv" target="_self" class="btn btn-outline ml-5"> Check my CV</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2 flex flex-row">
+      Latest projects 🚀
+    </div>
+  </div>
+
+  {
+    last_projects.length === 0 ? (
+      <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
+        <p class="font-bold">Sorry!</p>
+        <p>There are no projects to show at the moment. Check back later!</p>
+      </div>
+    ) : (
+      last_projects.map((project) => (
+        <>
+          <HorizontalCard
+            title={project.data.title}
+            img={project.data.heroImage}
+            desc={project.data.description}
+            url={"/projects/" + createSlug(project.data.title, project.slug)}
+            target="_self"
+            badge={project.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    )
+  }
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest posts 📝</div>
+  </div>
+
+  {
+    last_posts.length === 0 ? (
+      <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
+        <p class="font-bold">Sorry!</p>
+        <p>There are no posts to show at the moment. Check back later!</p>
+      </div>
+    ) : (
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/blog/" + createSlug(post.data.title, post.slug)}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    )
+  }
+</BaseLayout>

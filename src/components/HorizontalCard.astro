@@ -1,0 +1,46 @@
+---
+const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div
+  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+>
+  <a href={url} target={target}>
+    <div class="hero-content flex-col text-center md:flex-row md:text-left">
+      {
+        img && (
+          <Image
+            src={img}
+            width={210}
+            height={100}
+            format="webp"
+            alt={title}
+            class="md:max-w-[13rem] aspect-video max-w-full rounded-lg my-auto"
+          />
+        )
+      }
+      <div class="grow w-full">
+        <h3 class="flex-col md:flex-row text-xl font-bold">
+          <span>
+            {title}
+          </span>
+          <span>
+            {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+          </span>
+        </h3>
+        <p class="py-1 text-1xl">{desc}</p>
+        <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag: string) => (
+                <a href={`/tags/${tag}`} class="badge badge-outline">
+                  {tag}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

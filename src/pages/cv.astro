@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    With 8 years of experience in fast paced environments, my strong skills in <b
+      >project management</b
+    > and <b>software engineering</b> allowed me to thrive in the financial sector
+    where I developed a wide range of skills and abilities in IT. <br />
+    My broad knowledge allows me to have a higher vision of the issues at hand to
+    understand them and provide the best solution to solve them.
+    <br /><br />
+    I studied <b>artificial inteligence</b> in 2023 and obtained a <a
+      class="link-secondary"
+      target="_blank"
+      href="https://files.datascientest.com/diploma/1558b841-8b6b-47ca-9e07-317f369917e3.pdf"
+      >Machine learning engineer</a
+    >'s degree during which I developed a product classification platform that
+    can be deployed to serve any ecommerce website. <br /><br />Feel free to
+    contact me.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Machine Learning Engineer"
+      subtitle="2023 to 2023 at DataScientest, Paris, France"
+    />
+    <TimeLineElement
+      title="MSc in computer science and international project management"
+      subtitle="2013 to 2015 at ESAIP, Dijon, France"
+    />
+    <TimeLineElement
+      title="BSc in computer science and international project management"
+      subtitle="2012 to 2013 at ESAIP, Dijon, France"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiences</div>
+  </div>
+
+  <div class="time-line-container mb-10 grid gap-4">
+    <TimeLineElement
+      title="Tech Lead and Full-Stack Developer"
+      subtitle="From 2020 to 2023 at ING Bank, Paris, France"
+    >
+      <p>
+        As a <b>Tech Lead</b> for the <i>RPA and AI team</i>, I oversaw all the
+        technical aspects of our software team following
+        <b>Agile methodologies</b>. Some of my responsibilities were to:
+      </p>
+      <ul class="list-disc ml-4 my-2">
+        <li>Create a framework of technical standards and procedures.</li>
+        <li>
+          Oversee the quality of our deliveries via Code Review and by
+          collecting feedback from our clients.
+        </li>
+        <li>Guiding team members with troubleshooting technical issues.</li>
+        <li>
+          Promote our team capabilities within the bank and during town halls.
+        </li>
+        <li>Work closely with the board members to define our priorities.</li>
+        <li>Establish roadmap for the years to come.</li>
+        <li>
+          Ensuring continuous improvment by providing technical challenge or
+          doing pair (or even team) programming.
+        </li>
+        <li>
+          Supervise our team projects, either as an advisor or as Technical
+          Project Manager.
+        </li>
+      </ul>
+      <p>
+        As a <b>Full-Stack Developer</b>, I worked mainly on two applications
+        related to regulation:
+        <b>Know Your Customer</b> and <b>Customer Alert Monitoring</b>
+        . I built the front-end in JavaScript using React.js following a
+        <b>Test Driven Development</b> approach to ensure the quality of deliveries
+        and no regression, and helped build the back-end in .Net Core 3.2.
+      </p>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Technical Project Manager and Software Engineer"
+      subtitle="From 2018 to 2020 at ING Bank, Paris, France"
+    >
+      In continuation of my previous activity, I designed the main architecture
+      and all the tools used without the <i>RPA and AI team</i> and migrated our
+      existing robots from <b>Pascal</b> scripts to
+      <b>C# / .Net Framework</b>.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Technical Project Manager and Software Engineeer"
+      subtitle="From 2017 to 2018 at ING Bank, Paris, France"
+    >
+      Following a <b>Proof Of Concept</b> of using <b
+        >Robotic Process Automation</b
+      >, I co-developed the activity and defined the team vision. My role was to
+      <b>identify</b> processes that could be automated, <b>secure</b> them by ensuring
+      it was well documented, <b>develop the robots</b> and <b>monitor</b> them in
+      production.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Freelance Android app developer"
+      subtitle="From 2016 to 2017"
+    >
+      Development of an app to manage user's library of content from multiple
+      platforms.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Digital Project Manager"
+      subtitle="From 2015 to 2016 at AlumnForce, Paris, France"
+    >
+      Deployment of private social networks to manage alumni communities for
+      universities or big companies.
+      <ul class="list-disc ml-4 my-2">
+        <li>Mobile app deployment and update using <b>PhoneGap</b></li>
+        <li>
+          Customer management: configuration of their platform, training and
+          support
+        </li>
+        <li>Quality assurance</li>
+        <li>Implementation of <b>Agile methodologies</b> (SCRUM, KANBAN)</li>
+        <li>Creation of KPI monitoring dashboards</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc columns-2 md:columns-3 mx-6 mb-10">
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/68abc340-2084-4985-a558-66f467a9fc74.pdf"
+        target="_blank">Docker</a
+      >
+    </li>
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/54dccef2-a3de-4384-b475-0d77d55241ba.pdf"
+        target="_blank">Kubernetes</a
+      >
+    </li>
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/a86d0733-463c-4e08-a547-6fd26434024c.pdf"
+        target="_blank">FastApi</a
+      >
+    </li>
+
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/8760701b-4282-4b5a-bbe5-307a2c4742b8.pdf"
+        target="_blank">Power BI</a
+      >
+    </li>
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/1ae1ad71-2112-45ba-8e63-cea95fd5b5f9.pdf"
+        target="_blank">Tensorflow</a
+      >
+    </li>
+    <li>
+      <a
+        class="link-secondary"
+        href="https://verify.datascientest.com/d1f92483-d1ff-4804-9cb8-ce0cf5109c41.pdf"
+        target="_blank">Airflow</a
+      >
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
+    <li>Full-Stack development</li>
+    <li>Machine Learning</li>
+    <li>Robotic Process Automation</li>
+    <li>Project Management</li>
+    <li>MLOps & DevOps</li>
+    <li>Data Visualization</li>
+    <li>Containerization</li>
+    <li>Database management</li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Programming languages</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
+    <li>C#</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>SQL</li>
+    <li>Pascal</li>
+    <li>VBA</li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Frameworks</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6">
+    <li>.Net Framework</li>
+    <li>.Net Core 3.2</li>
+    <li>WPF</li>
+    <li>React.js</li>
+    <li>Astro.js</li>
+    <li>Microsoft UI Automation</li>
+  </ul>
+</BaseLayout>
