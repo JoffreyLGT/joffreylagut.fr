@@ -1,7 +1,6 @@
 # I wrote an article regarding this workflow available at https://joffreylagut.fr/blog/continous-deployment-on-hostinger-using-github-pages
 name: Deploy website to Hostinger
 on:
-  pull_request: # For test purpose
   workflow_dispatch: # Allow manual run from Github
   release: # Run automatically when a new release is published
     types: [published]
