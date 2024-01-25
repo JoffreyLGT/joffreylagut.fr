@@ -1,6 +1,7 @@
 # I wrote an article regarding this workflow available at https://joffreylagut.fr/blog/continous-deployment-on-hostinger-using-github-pages
 name: Deploy website to Hostinger
 on:
+  pull_request: # For test purpose
   workflow_dispatch: # Allow manual run from Github
   release: # Run automatically when a new release is published
     types: [published]
@@ -16,14 +17,14 @@ jobs:
       - name: 🗂️ Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🔨 Install and setup pnpm $pnpm-version
+      - name: 🔨 Install and setup pnpm ${{ env.pnpm-version }}
         uses: pnpm/action-setup@v2 
         with:
-          version: $pnpm-version
-      - name: 🔧 Install and setup Node.js $node-version
+          version: ${{ env.pnpm-version }}
+      - name: 🔧 Install and setup Node.js ${{ env.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: $node-version
+          node-version: ${{ env.node-version }}
           cache: 'pnpm'
 
       - name: 🛠️ Install dependencies
