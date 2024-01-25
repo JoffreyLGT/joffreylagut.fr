@@ -1,7 +1,6 @@
 name: Deploy website to Hostinger
 on:
   workflow_dispatch:
-  pull_request:
   release:
     types: [published]
 jobs:
@@ -33,4 +32,3 @@ jobs:
         username: ${{ secrets.GH_DEPLOY_FTP_USERNAME }}
         password: ${{ secrets.GH_DEPLOY_FTP_PASSWORD}}
         local-dir: ./dist/
-        dry-run: true
