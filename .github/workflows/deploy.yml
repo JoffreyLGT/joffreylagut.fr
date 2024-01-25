@@ -1,34 +1,42 @@
+# I wrote an article regarding this workflow available at https://joffreylagut.fr/blog/continous-deployment-on-hostinger-using-github-pages
 name: Deploy website to Hostinger
 on:
-  workflow_dispatch:
-  release:
+  workflow_dispatch: # Allow manual run from Github
+  release: # Run automatically when a new release is published
     types: [published]
 jobs:
   build:
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [20]
+    runs-on: ubuntu-latest
+    env:
+      # Set the same versions as your own to ensure your project
+      # build without issues.
+      node-version: 20
+      pnpm-version: 8
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 8
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - name: Install dependencies
-      run: pnpm install
+      - name: 🗂️ Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Build application
-      run: pnpm run build
+      - name: 🔨 Install and setup pnpm $pnpm-version
+        uses: pnpm/action-setup@v2 
+        with:
+          version: $pnpm-version
+      - name: 🔧 Install and setup Node.js $node-version
+        uses: actions/setup-node@v3
+        with:
+          node-version: $node-version
+          cache: 'pnpm'
 
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.GH_DEPLOY_FTP_SERVER }}
-        username: ${{ secrets.GH_DEPLOY_FTP_USERNAME }}
-        password: ${{ secrets.GH_DEPLOY_FTP_PASSWORD}}
-        local-dir: ./dist/
+      - name: 🛠️ Install dependencies
+        run: pnpm install
+
+      - name: 🛠️ Build application 
+        run: pnpm run build
+
+      - name: 📂 Sync files with FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.GH_DEPLOY_FTP_SERVER }}
+          username: ${{ secrets.GH_DEPLOY_FTP_USERNAME }}
+          password: ${{ secrets.GH_DEPLOY_FTP_PASSWORD }}
+          port: 21 # Change if necessary
+          local-dir: ./dist/ # Change if necessary
