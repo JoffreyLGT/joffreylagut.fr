@@ -32,3 +32,4 @@ This website must by simple, fully customizable using visual tools and fast to l
 | --- | --- |
 | CMS | [Wordpress](https://wordpress.org/)|
 | Theme | [Wordpress site editor](https://wordpress.org/documentation/article/site-editor/) |
+| Time spent | 7h |
