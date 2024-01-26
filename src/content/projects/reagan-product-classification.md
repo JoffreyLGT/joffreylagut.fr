@@ -1,7 +1,7 @@
 ---
 title: "Reagan: online store product classification platform"
 description: Self learning platform to categorize products.
-pubDate: 2024-01-24
+pubDate: 2023-10-02
 updatedDate: 2024-01-24
 heroImage: ./assets/reagan-hero.jpg
 badge: Machine Learning
@@ -19,7 +19,7 @@ tags:
 - [Features](#features)
 - [Technical environment](#technical-environment)
 - [Architecture diagram](#architecture-diagram)
-- [Contect](#context)
+- [Context](#context)
 - [Resources](#resources)
 
 ## Elevator pitch
