@@ -4,7 +4,7 @@ description: Multilingual website for a cosmetic science company.
 pubDate: 2024-01-23
 updatedDate: 2024-01-23
 heroImage: ./assets/coherentbeauty-hero.png
-badge: Website
+badge: Web
 tags:
 - wordpress
 - cms
