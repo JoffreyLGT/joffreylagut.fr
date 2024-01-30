@@ -10,7 +10,13 @@ tags:
 - cms
 ---
 
-Visit [coherentbeauty.com](https://coherentbeauty.com) to see it live.
+## Project sheet
+
+| Label | Information |
+| --- | --- |
+| Demo | [coherentbeauty.com](https://coherentbeauty.com) |
+| Development time | 7h |
+| Team | Solo dev + company owner |
 
 ## Context
 
@@ -32,4 +38,3 @@ This website must by simple, fully customizable using visual tools and fast to l
 | --- | --- |
 | CMS | [Wordpress](https://wordpress.org/)|
 | Theme | [Wordpress site editor](https://wordpress.org/documentation/article/site-editor/) |
-| Time spent | 7h |
