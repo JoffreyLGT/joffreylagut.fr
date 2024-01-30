@@ -31,7 +31,8 @@ I wanted to have my own website to be able to share my thoughts and information 
 
 ## Requirements
 
-- Must be fast.
+- Must be fast to load.
+- Must be minimalistic.
 - Avoid any backend and prefer plain markdown files that will survive all JavaScript frameworks and <i>flavor of the decade</i> programming language.
 - Must use TailwindCSS. I don't want to go back to the project in X months and have to play hide and seek with the CSS classes.
 
