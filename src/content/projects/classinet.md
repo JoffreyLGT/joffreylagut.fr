@@ -14,14 +14,6 @@ tags:
 - "machine learning"
 ---
 
-## Table of content
-- [Project sheet](#project-sheet)
-- [Context](#context)
-- [Requirements](#requirements)
-- [Features](#features)
-- [Technical environment](#technical-environment)
-- [Conclusion and technical overview](#conclusion-and-technical-overview)
-
 ## Project sheet
 
 | Label | Information |
@@ -29,6 +21,24 @@ tags:
 | State | In development |
 | Team | Solo dev |
 | Source Code | [Github](https://github.com/JoffreyLGT/ClassiNet) |
+
+## Table of content
+- [Objective](#objective)
+- [Context](#context)
+- [Requirements](#requirements)
+- [Features](#features)
+- [Technical environment](#technical-environment)
+- [Conclusion and technical overview](#conclusion-and-technical-overview)
+
+
+## Objective
+
+ClassiNet is a specialized tool designed to automate and optimize product categorization processes using advanced machine learning techniques. 
+The project focuses on streamlining the classification of products into predefined categories, addressing the challenges of managing diverse and extensive product inventories. 
+
+By leveraging neural networks and data-driven algorithms, ClassiNet provides a reliable, scalable solution to ensure accurate and consistent categorization. This innovation is particularly valuable for e-commerce platforms, inventory management systems, and businesses seeking to enhance efficiency in organizing their product offerings. 
+
+With ClassiNet, the complex task of product categorization is transformed into a seamless, automated experience, showcasing the power of AI in solving real-world challenges.
 
 
 ## Context
