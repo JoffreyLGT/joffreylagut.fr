@@ -2,44 +2,44 @@
 title: "ClassiNet"
 description: AI-Powered Product Categorization with a Robust .NET Backend and an Interactive Angular Dashboard.
 pubDate: 2024-12-03
-updatedDate: 2024-12-03
-heroImage: ./assets/classinet-hero.png
+updatedDate: 2025-01-16
+heroImage: ./assets/classinet-product-categorization.png
 badge: Web
 tags:
-- web
-- frontend
-- backend
-- csharp
-- typescript
-- "machine learning"
+  - web
+  - frontend
+  - backend
+  - csharp
+  - typescript
+  - "machine learning"
 ---
 
 ## Project sheet
 
-| Label | Information |
-| --- | --- |
-| State | In development |
-| Team | Solo dev |
+| Label       | Information                                       |
+| ----------- | ------------------------------------------------- |
+| State       | In development                                    |
+| Team        | Solo dev                                          |
 | Source Code | [Github](https://github.com/JoffreyLGT/ClassiNet) |
 
 ## Table of content
+
 - [Objective](#objective)
 - [Context](#context)
 - [Requirements](#requirements)
 - [Features](#features)
 - [Technical environment](#technical-environment)
 - [Conclusion and technical overview](#conclusion-and-technical-overview)
-
+- [Screenshots](#screenshots)
 
 ## Objective
 
-ClassiNet is a specialized tool designed to automate and optimize product categorization processes using advanced machine learning techniques. 
-The project focuses on streamlining the classification of products into predefined categories, addressing the challenges of managing diverse and extensive product inventories. 
+ClassiNet is a specialized tool designed to automate and optimize product categorization processes using advanced machine learning techniques.
+The project focuses on streamlining the classification of products into predefined categories, addressing the challenges of managing diverse and extensive product inventories.
 
-By leveraging neural networks and data-driven algorithms, ClassiNet provides a reliable, scalable solution to ensure accurate and consistent categorization. This innovation is particularly valuable for e-commerce platforms, inventory management systems, and businesses seeking to enhance efficiency in organizing their product offerings. 
+By leveraging neural networks and data-driven algorithms, ClassiNet provides a reliable, scalable solution to ensure accurate and consistent categorization. This innovation is particularly valuable for e-commerce platforms, inventory management systems, and businesses seeking to enhance efficiency in organizing their product offerings.
 
 With ClassiNet, the complex task of product categorization is transformed into a seamless, automated experience, showcasing the power of AI in solving real-world challenges.
-
 
 ## Context
 
@@ -49,11 +49,10 @@ Among the numerous libraries released by Microsoft, ML.NET captured my attention
 
 After a year of working in Python, I decided to return to .NET and experiment by creating a service similar to Reagan. This new platform would leverage .NET 9 for the backend and Angular for the dashboard.
 
-
 ## Requirements
 
--	API and scripts: must be written in .NET 9 (C#), including the deep learning model.
--	Front end: must be developed using Angular 19.
+- API and scripts: must be written in .NET 9 (C#), including the deep learning model.
+- Front end: must be developed using Angular 19.
 
 ## Features
 
@@ -86,3 +85,25 @@ After a year of working in Python, I decided to return to .NET and experiment by
 ## Conclusion and technical overview
 
 This project demonstrates the versatility of .NET 9 in handling modern machine learning tasks while maintaining a robust backend and an interactive frontend. By combining cutting-edge technologies like ML.NET and Angular, this platform serves as a powerful tool for product classification and management in e-commerce environments.
+
+## Screenshots
+
+### View: Categorize a product
+
+![Categorize a product](./assets/classinet-product-categorization.png)
+
+### View: Data visualization
+
+![Data Visualization](./assets/classinet-data-visualization.png)
+
+### View: Product management
+
+![Product management](./assets/classinet-product-management.png)
+
+### View: Add new user (dark mode)
+
+![Add new user](./assets/classinet-add-user.png)
+
+### API: Swagger documentation
+
+![Swagger documentation](./assets/classinet-swagger.png)
